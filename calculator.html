@@ -1,0 +1,51 @@
+<html>
+ <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title> Calculator </title>
+  <script language="javascript">
+  var one = document.getElementById("1").value;
+  var two = document.getElementById("2").value;
+   
+  function times(){
+     var one = document.getElementById("1").value;
+     var two = document.getElementById("2").value;
+    document.getElementById("text1").value =Number(one) * Number(two);
+  }
+ 
+   function divide(){
+    var one = document.getElementById("1").value;
+    var two = document.getElementById("2").value;
+    if(two == "0"){
+        alert("error");
+        document.getElementById("2").value = "";
+    }
+    document.getElementById("text1").value =Number(one) / Number(two);
+  }
+ 
+   function plus(){
+   var one = document.getElementById("1").value;
+   var two = document.getElementById("2").value;
+     
+    document.getElementById("text1").value =Number(one) + Number(two);
+  }
+ 
+   function minus(){
+   var one = document.getElementById("1").value;
+   var two = document.getElementById("2").value;
+     
+    document.getElementById("text1").value =Number(one) - Number(two);
+  }
+  </script>
+ </head>
+ <body>
+  First Number：<input id="1" type="text"/><br></br>
+  Second Number：<input id="2" type="text"/><br></br>
+  
+<input  type="button"  onclick="times()" value="×"></input>
+<input  type="button"  onclick="divide()" value="÷"></input>
+<input  type="button"  onclick="plus()" value="+"></input>
+<input  type="button"  onclick="minus()" value="-"></input>  
+<br></br>
+Outcome：<input id="text1" type="text" class="tool" ></input>        
+ </body>
+</html>
